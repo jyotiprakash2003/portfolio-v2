@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JYOTIPRAKASH — Digital Product Designer &amp; Front-End Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Jyotiprakash Tripathy — Neo-brutalist digital product designer, visual identity strategist, and front-end developer. Designed for the void."
+    />
+    <meta name="theme-color" content="#060606" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <!-- Navbar -->
+      <header class="navbar">
+        <div class="container navbar-inner">
+          <a href="#origin" class="brand">
+            <span class="brand-square"></span>
+            <span class="brand-text">JYOTIPRAKASH</span>
+          </a>
+
+          <nav class="nav-desktop" aria-label="Primary">
+            <a href="#origin" class="nav-link">01. ORIGIN</a>
+            <a href="#narrative" class="nav-link">02. NARRATIVE</a>
+            <a href="#competencies" class="nav-link">03. COMPETENCIES</a>
+            <a href="#archive" class="nav-link">04. ARCHIVE</a>
+            <a href="#contact" class="nav-link">05. CONTACT</a>
+          </nav>
+
+          <div class="nav-actions">
+            <button
+              type="button"
+              id="theme-toggle"
+              class="icon-btn"
+              aria-label="Switch to light mode"
+            >
+              <!-- Sun icon (shown in dark mode) -->
+              <svg id="icon-sun" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path><path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path><path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+              <!-- Moon icon (shown in light mode) -->
+              <svg id="icon-moon" class="icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+              </svg>
+            </button>
+
+            <a href="#contact" class="btn-nav-cta">
+              <span>GET IN TOUCH</span>
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 7h10v10"></path><path d="M7 17 17 7"></path>
+              </svg>
+            </a>
+
+            <button
+              type="button"
+              id="mobile-menu-btn"
+              class="icon-btn mobile-only"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+            >
+              <svg id="icon-menu" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+              </svg>
+              <svg id="icon-close" class="icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 6 6 18"></path><path d="m6 6 12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-drawer" class="mobile-drawer hidden" aria-hidden="true">
+          <nav class="mobile-nav" aria-label="Mobile navigation">
+            <span class="mobile-nav-label">INDEX // NAVIGATION</span>
+            <a href="#origin" class="mobile-nav-link">
+              <span>01. ORIGIN</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            </a>
+            <a href="#narrative" class="mobile-nav-link">
+              <span>02. NARRATIVE</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            </a>
+            <a href="#competencies" class="mobile-nav-link">
+              <span>03. COMPETENCIES</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            </a>
+            <a href="#archive" class="mobile-nav-link">
+              <span>04. ARCHIVE</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            </a>
+            <a href="#contact" class="mobile-nav-link">
+              <span>05. CONTACT</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            </a>
+          </nav>
+
+          <div class="mobile-drawer-footer">
+            <a href="#contact" class="mobile-drawer-cta">
+              <span class="status-dot"></span>
+              <span>GET IN TOUCH</span>
+            </a>
+            <p class="mobile-drawer-copy">DESIGNED FOR THE VOID · ©2026</p>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- 01. Hero Section -->
+        <section id="origin" class="section bg-arch-grid">
+          <div class="container hero-container">
+            <div class="hero-topbar">
+              <div class="availability">
+                <span class="status-dot pulse"></span>
+                <span>AVAILABLE FOR FREELANCE &amp; PRODUCT ROLES</span>
+              </div>
+              <span class="mono-meta">DESIGNED FOR THE VOID</span>
+            </div>
+
+            <div class="hero-grid">
+              <!-- Frameless Portrait -->
+              <div class="hero-portrait-col">
+                <div class="hero-portrait-wrap">
+                  <div class="hero-portrait-glow" aria-hidden="true"></div>
+                  <img
+                    src="portrait.png"
+                    alt="Jyotiprakash Tripathy"
+                    class="hero-portrait-img"
+                  />
+                  <div class="hero-portrait-fade" aria-hidden="true"></div>
+                </div>
+              </div>
+
+              <!-- Hero Copy & CTAs -->
+              <div class="hero-text-col">
+                <p class="hero-role">
+                  NEO-BRUTALIST PRODUCT DESIGNER · VISUAL STRATEGIST · FRONT-END DEV
+                </p>
+
+                <h1 class="hero-title">
+                  Hi, I am <br class="mobile-break" />
+                  <span class="hero-name-underline">Jyotiprakash</span>
+                </h1>
+
+                <div class="typewriter-row">
+                  <span class="typewriter-prefix">I design ·</span>
+                  <span id="typewriter-text" class="typewriter-word">&nbsp;</span>
+                  <span class="typewriter-cursor" aria-hidden="true"></span>
+                </div>
+
+                <p class="hero-desc">
+                  Navigating the tension between rigid architectural structure and
+                  expressive digital voids. I craft high-contrast interfaces, brand
+                  identities, and front-end experiences built to be remembered.
+                </p>
+
+                <div class="hero-ctas">
+                  <a href="#archive" class="btn-primary">
+                    <span>EXPLORE THE ARCHIVE</span>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 7 10 10"></path><path d="M17 7v10H7"></path></svg>
+                  </a>
+                  <a href="#contact" class="btn-secondary">
+                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
+                    <span>START A PROJECT</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Highlights Strip -->
+            <div class="highlights-grid">
+              <div class="highlight-card">
+                <p class="highlight-label">APPAREL SOLD</p>
+                <p class="highlight-value">100+ PIECES</p>
+              </div>
+              <div class="highlight-card">
+                <p class="highlight-label">CAMPUS LEAD</p>
+                <p class="highlight-value">VIT · VIBRANCE '25</p>
+              </div>
+              <div class="highlight-card">
+                <p class="highlight-label">CO-FOUNDER</p>
+                <p class="highlight-value">ESNCE JOURNAL</p>
+              </div>
+              <div class="highlight-card">
+                <p class="highlight-label">FOCUS</p>
+                <p class="highlight-value">PRODUCT &amp; FRONT-END</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 02. Narrative Section -->
+        <section id="narrative" class="section">
+          <div class="container section-pad">
+            <div class="section-header">
+              <div>
+                <p class="section-kicker">02 — THE NARRATIVE</p>
+                <h2 class="section-title">POINT OF ORIGIN.</h2>
+              </div>
+              <p class="mono-meta">FIG. · 01 · CHRONOLOGICAL EVOLUTION</p>
+            </div>
+
+            <div id="narrative-grid" class="narrative-grid"></div>
+          </div>
+        </section>
+
+        <!-- 03. Competencies Section -->
+        <section id="competencies" class="section">
+          <div class="container section-pad">
+            <div class="section-header section-header-wrap">
+              <div class="section-header-copy">
+                <p class="section-kicker">03 — COMPETENCIES</p>
+                <h2 class="section-title">SKILLS &amp; TOOLS.</h2>
+                <p class="section-subtitle">
+                  The intersection of technical precision and creative exploration.
+                  Quantifying expertise across design systems, software stack, and
+                  front-end architectures.
+                </p>
+              </div>
+
+              <div class="filter-group" id="skills-filters">
+                <button type="button" class="filter-btn active" data-skill-filter="ALL">ALL</button>
+                <button type="button" class="filter-btn" data-skill-filter="CORE EXPERTISE">CORE EXPERTISE</button>
+                <button type="button" class="filter-btn" data-skill-filter="SOFTWARE STACK">SOFTWARE STACK</button>
+              </div>
+            </div>
+
+            <div id="skills-grid" class="skills-grid"></div>
+          </div>
+        </section>
+
+        <!-- 04. Archive Section -->
+        <section id="archive" class="section">
+          <div class="container section-pad">
+            <div class="section-header section-header-wrap">
+              <div class="section-header-copy">
+                <p class="section-kicker">04 — SELECTED WORKS</p>
+                <h2 class="section-title">THE ARCHIVE.</h2>
+                <p class="section-subtitle">
+                  A curated selection of brutalist interfaces, brand identities, and
+                  visual experiments. Navigating the tension between rigid structure
+                  and expressive voids.
+                </p>
+              </div>
+
+              <div class="filter-group" id="archive-filters">
+                <button type="button" class="filter-btn active" data-archive-filter="ALL">ALL (11)</button>
+                <button type="button" class="filter-btn" data-archive-filter="WEB">WEB (2)</button>
+                <button type="button" class="filter-btn" data-archive-filter="PRODUCTS">PRODUCTS (4)</button>
+                <button type="button" class="filter-btn" data-archive-filter="GRAPHICS">GRAPHICS (5)</button>
+              </div>
+            </div>
+
+            <div id="archive-grid" class="archive-grid"></div>
+
+            <div id="curatorial-note" class="curatorial-note">
+              <p class="mono-meta">04 // CURATORIAL NOTE</p>
+              <p class="curatorial-quote">
+                &ldquo;Exploring the boundaries of legibility and structure. These
+                pieces strip away the decorative to expose the underlying skeleton
+                of design.&rdquo;
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 05. Contact Section -->
+        <section id="contact" class="section">
+          <div class="container section-pad">
+            <div class="section-header">
+              <div>
+                <p class="section-kicker">05 — CONNECTION</p>
+                <h2 class="section-title">LET&apos;S BUILD SOMETHING.</h2>
+                <p class="section-subtitle">
+                  Open for digital product design, brand identity systems, and
+                  front-end collaborations. Reach out directly or send a quick brief.
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-grid">
+              <div class="contact-channels">
+                <!-- Email Card -->
+                <div class="contact-card">
+                  <div class="contact-card-top">
+                    <span class="contact-label">
+                      <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                      EMAIL
+                    </span>
+                    <button type="button" id="copy-email-btn" class="copy-btn">
+                      <svg id="copy-icon" class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                      <svg id="check-icon" class="icon-xs hidden text-emerald" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"></path></svg>
+                      <span id="copy-btn-text">COPY</span>
+                    </button>
+                  </div>
+                  <a href="mailto:jyotiprakashiiscb@gmail.com" class="contact-value">
+                    jyotiprakashiiscb@gmail.com
+                  </a>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="contact-card">
+                  <span class="contact-label">
+                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    PHONE
+                  </span>
+                  <a href="tel:+919938459059" class="contact-value">
+                    +91 99384 59059
+                  </a>
+                </div>
+
+                <!-- Socials -->
+                <div class="social-grid">
+                  <a
+                    href="https://www.linkedin.com/in/jyotiprakash-tripathy-640954216/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link"
+                  >
+                    <span>LINKEDIN</span>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/sudopacman_/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link"
+                  >
+                    <span>INSTAGRAM</span>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Quick Inquiry Form -->
+              <form id="contact-form" class="contact-form">
+                <div class="form-header">
+                  <span class="mono-meta">DIRECT DISPATCH // OPENS YOUR MAIL CLIENT</span>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-field">
+                    <label for="contact-name" class="form-label">YOUR NAME</label>
+                    <input
+                      id="contact-name"
+                      type="text"
+                      required
+                      placeholder="Alex Rivera"
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-field">
+                    <label for="contact-subject" class="form-label">PROJECT / SUBJECT</label>
+                    <input
+                      id="contact-subject"
+                      type="text"
+                      required
+                      placeholder="Brand Identity / Web App"
+                      class="form-input"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label for="contact-message" class="form-label">BRIEF / MESSAGE</label>
+                  <textarea
+                    id="contact-message"
+                    rows="4"
+                    required
+                    placeholder="Tell me about your timeline, goals, and what we're building..."
+                    class="form-input form-textarea"
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary form-submit">
+                  <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+                  <span>SEND MESSAGE</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container footer-inner">
+          <p class="footer-copy">
+            JYOTIPRAKASH · ©2026 JYOTIPRAKASH TRIPATHY — DESIGNED FOR THE VOID
+          </p>
+          <a href="#origin" class="back-to-top">
+            <span>BACK TO TOP</span>
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg>
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-box" id="modal-box">
+        <div class="modal-header">
+          <span id="modal-meta" class="mono-meta"></span>
+          <button type="button" id="modal-close-btn" class="modal-close" aria-label="Close project details">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+          </button>
+        </div>
+        <div id="modal-visual"></div>
+        <div class="modal-body">
+          <div>
+            <h3 id="modal-title" class="modal-title"></h3>
+            <p id="modal-subtitle" class="mono-meta"></p>
+          </div>
+          <p id="modal-desc" class="modal-desc"></p>
+          <div>
+            <p class="modal-tags-label">DELIVERABLES &amp; STACK</p>
+            <div id="modal-tags" class="modal-tags"></div>
+          </div>
+          <div class="modal-actions">
+            <a id="modal-live-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary hidden">
+              <span>OPEN LIVE PROJECT</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            </a>
+            <button type="button" id="modal-close-footer" class="btn-secondary">CLOSE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
