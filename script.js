@@ -139,123 +139,6 @@ const PROJECTS = [
     liveUrl: 'https://esnce-fragrance-journal.vercel.app/',
     visualStyle: 'esnce',
   },
-  {
-    id: 'wagon',
-    index: '03',
-    title: 'WAGON',
-    subtitle: 'Automotive-Inspired Apparel Concept',
-    category: 'PRODUCTS',
-    year: '2024',
-    role: 'Apparel & Concept Designer',
-    description:
-      'Graphic merchandise and apparel concept inspired by the iconic boxy silhouette and utilitarian engineering of the Mercedes-Benz G-Wagon.',
-    deliverables: ['Apparel Graphics', 'Print Layout', 'Product Mockups'],
-    visualStyle: 'product',
-  },
-  {
-    id: 'drip',
-    index: '04',
-    title: 'DRIP',
-    subtitle: 'Product Design for Drip Apparels',
-    category: 'PRODUCTS',
-    year: '2023',
-    role: 'Lead Apparel Designer',
-    description:
-      'Commercial streetwear product design and graphic direction crafted for Drip Apparels during 2023, balancing bold chest prints with wearable street silhouettes.',
-    deliverables: ['Streetwear Drops', 'Typography Prints', 'Brand Collateral'],
-    visualStyle: 'product',
-  },
-  {
-    id: 'system-noise',
-    index: '05',
-    title: 'SYSTEM NOISE',
-    subtitle: 'Indie T-Shirt Brand Design & Mockups',
-    category: 'PRODUCTS',
-    year: '2023',
-    role: 'Designer & Art Director',
-    description:
-      'Visual system, distressed typographic graphics, and studio-grade garment mockups created for independent streetwear and t-shirt labels.',
-    deliverables: ['Garment Mockups', 'Distressed Type', 'Drop Art Direction'],
-    visualStyle: 'product',
-  },
-  {
-    id: 'especiale',
-    index: '06',
-    title: 'ESPECIALE',
-    subtitle: 'Design Prototype for ESNCE',
-    category: 'PRODUCTS',
-    year: '2025',
-    role: 'Product & Packaging Designer',
-    description:
-      'Signature physical product and packaging prototype developed for ESNCE, translating minimalist digital typography into tactile bottle and label geometry.',
-    deliverables: ['Packaging Prototype', 'Label Typography', 'Visual Direction'],
-    visualStyle: 'product',
-  },
-  {
-    id: 'enigma',
-    index: '07',
-    title: 'ENIGMA',
-    subtitle: 'Poster Design',
-    category: 'GRAPHICS',
-    year: '2024',
-    role: 'Graphic Designer',
-    description:
-      'High-contrast monochrome poster study investigating tension, negative space, and geometric balance.',
-    deliverables: ['Poster Series', 'Grid Composition', 'Print Ready Art'],
-    visualStyle: 'graphic',
-  },
-  {
-    id: 'silent-forms',
-    index: '08',
-    title: 'SILENT FORMS',
-    subtitle: 'Brand Identity',
-    category: 'GRAPHICS',
-    year: '2024',
-    role: 'Brand Strategist & Designer',
-    description:
-      'Minimalist visual identity system built around stark typographic proportions and disciplined spatial silence.',
-    deliverables: ['Logo Mark', 'Type System', 'Identity Guidelines'],
-    visualStyle: 'graphic',
-  },
-  {
-    id: 'kinetic-type',
-    index: '09',
-    title: 'KINETIC TYPE',
-    subtitle: 'Experimental Illustration',
-    category: 'GRAPHICS',
-    year: '2024',
-    role: 'Visual Artist',
-    description:
-      'Experimental typographic illustration treating letterforms as moving architectural structures under tension.',
-    deliverables: ['Experimental Type', 'Motion Frames', 'Editorial Visuals'],
-    visualStyle: 'graphic',
-  },
-  {
-    id: 'brutalist-anatomy',
-    index: '10',
-    title: 'BRUTALIST ANATOMY',
-    subtitle: 'Architectural Study',
-    category: 'GRAPHICS',
-    year: '2024',
-    role: 'Visual Researcher',
-    description:
-      'Deconstruction of brutalist concrete geometry and Swiss grid skeletons into raw monochrome visual studies.',
-    deliverables: ['Structural Grid', 'Monochrome Study', 'Visual Essay'],
-    visualStyle: 'graphic',
-  },
-  {
-    id: 'utopia',
-    index: '11',
-    title: 'UTOPIA',
-    subtitle: 'Poster Series',
-    category: 'GRAPHICS',
-    year: '2024',
-    role: 'Art Director',
-    description:
-      'Multi-piece poster series exploring dystopian-utopian contrast through stark typography and raw texture.',
-    deliverables: ['Series Direction', 'Poster Layouts', 'Texture Work'],
-    visualStyle: 'graphic',
-  },
 ];
 
 // 1. Theme Toggle
@@ -430,7 +313,7 @@ function buildProjectVisual(project) {
         </div>
       </div>
     `;
-  } else if (project.visualStyle === 'esnce') {
+  if (project.visualStyle === 'esnce') {
     inner = `
       <div class="visual-esnce">
         <div class="visual-esnce-bottle">
@@ -445,22 +328,6 @@ function buildProjectVisual(project) {
         </div>
       </div>
     `;
-  } else if (project.visualStyle === 'product') {
-    inner = `
-      <div class="visual-product-box">
-        <div class="visual-product-frame">${project.title}</div>
-        <span style="margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.22em;color:var(--text-secondary)">
-          PRODUCT // ARCHIVE
-        </span>
-      </div>
-    `;
-  } else {
-    inner = `
-      <div class="visual-graphic-box">
-        <div class="visual-graphic-inner"></div>
-        <span>${project.title}</span>
-      </div>
-    `;
   }
 
   return `
@@ -473,24 +340,11 @@ function buildProjectVisual(project) {
   `;
 }
 
-// 7. Render Archive & Filter
+// 7. Render Archive
 const archiveGrid = document.getElementById('archive-grid');
-const archiveButtons = document.querySelectorAll('[data-archive-filter]');
-const curatorialNote = document.getElementById('curatorial-note');
 
-function renderArchive(filter) {
-  const list =
-    filter === 'ALL'
-      ? PROJECTS
-      : PROJECTS.filter((p) => p.category === filter);
-
-  curatorialNote.classList.toggle(
-    'hidden',
-    filter !== 'ALL' && filter !== 'GRAPHICS',
-  );
-
-  archiveGrid.innerHTML = list
-    .map(
+function renderArchive() {
+  archiveGrid.innerHTML = PROJECTS.map(
       (project) => `
       <article class="project-card">
         <div>
@@ -536,14 +390,7 @@ function renderArchive(filter) {
   });
 }
 
-archiveButtons.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    archiveButtons.forEach((b) => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderArchive(btn.getAttribute('data-archive-filter'));
-  });
-});
-renderArchive('ALL');
+renderArchive();
 
 // 8. Project Modal
 const modal = document.getElementById('project-modal');
