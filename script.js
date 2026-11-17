@@ -313,7 +313,7 @@ function buildProjectVisual(project) {
         </div>
       </div>
     `;
-  if (project.visualStyle === 'esnce') {
+  } else if (project.visualStyle === 'esnce') {
     inner = `
       <div class="visual-esnce">
         <div class="visual-esnce-bottle">
